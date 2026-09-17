@@ -1,0 +1,10 @@
+# あすはれ薬局（株式会社テトテリンクス） — クローラー設定
+# https://tetote-links.co.jp/
+
+User-agent: *
+Allow: /
+
+# 隠す必要のあるディレクトリは特になし。すべて公開。
+
+# サイトマップの場所を Google にお知らせ
+Sitemap: https://tetote-links.co.jp/sitemap.xml

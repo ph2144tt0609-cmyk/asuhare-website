@@ -14,6 +14,10 @@
 | `assets/style.css` | 見た目（色・余白・文字の大きさ） |
 | `images/asuhare-exterior.jpeg` | 外観写真 |
 | `CNAME` | GitHub Pages のカスタムドメイン指定。**消さない・書き換えない** |
+| `.nojekyll` | GitHub Pages に Jekyll を通させないための空ファイル。**消さない**（消すと `_` で始まるファイルが黙って配信されなくなる） |
+| `robots.txt` / `sitemap.xml` | 検索エンジン向け。URLを変えたらここも直す |
+| `公開.bat` / `publish.ps1` | **ダブルクリックで公開**（コミット→push→1〜2分で反映） |
+| `DEPLOY.md` | 公開・更新・独自ドメインの手順書 |
 
 **JavaScript は1行も無い。** 元サイト（ChatGPTのサイト公開機能で作られた React 製）から取り出した際、
 270KB の JS はハイドレーション用で表示に一切関与していなかったため全て外してある
@@ -23,7 +27,10 @@
 
 1. このフォルダで Claude Code を開き、日本語で頼む（例「営業時間に祝日の行を足して」）
 2. `index.html` をブラウザにドラッグして見た目を確認
-3. `git add -A && git commit -m "..." && git push` → **数分で本番に反映される**
+3. **`公開.bat` をダブルクリック** → 1〜2分で本番に反映される
+   （コマンド派は `git add -A && git commit -m "..." && git push`）
+
+詳しい手順・独自ドメインの設定・残作業は `DEPLOY.md` を見る。
 
 ## 注意
 

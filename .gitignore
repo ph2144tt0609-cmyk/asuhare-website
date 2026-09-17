@@ -1,0 +1,16 @@
+# OS/環境固有ファイル
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# Claude Code の作業ファイル
+.claude/
+
+# Node.js（将来必要になった場合のため）
+node_modules/
+package-lock.json
+
+# 作業用・バックアップ
+backup_*/
+*.zip
