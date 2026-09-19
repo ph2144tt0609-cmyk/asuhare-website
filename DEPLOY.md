@@ -7,7 +7,7 @@
 - 本番URL: **https://tetote-links.co.jp/**
 - GitHubリポジトリ: `asuhare-website`（Public — GitHub Pages 無料枠の要件）
 - ホスティング: GitHub Pages（main ブランチのルートをそのまま配信）
-- 運営: 株式会社テトテリンクス
+- 運営: 株式会社テトテリンクス（**実際の更新作業は田中が行う**）
 - 旧URL: `asuhare-pharmacy.toru-hitoyado.chatgpt.site`（ChatGPTのサイト公開機能）
   → 新URLが数日問題なく開くのを確認してから停止する。**先に止めない**
 
@@ -17,9 +17,9 @@
 
 1. このフォルダ（`C:\dev\asuhare-website`）で Claude Code を開き、日本語で頼む
 2. `index.html` をブラウザにドラッグして見た目を確認
-3. **`公開.bat` をダブルクリック**（変更ファイルを表示 → `y` で確定 → コミット＋push。1〜2分で本番反映）
+3. **`公開.bat` をダブルクリック**（コミット＋push。1〜2分で本番反映）
 
-コマンドで済ませる場合も `publish.ps1` を通す（`-Yes` で確認を省略できる）。
+コマンドで済ませる場合は `git add -A && git commit -m "..." && git push`。
 
 ---
 
@@ -69,4 +69,5 @@ DNSの管理画面＝エックスサーバー（**株式会社テトテリンク
 
 ## 退避先（使っていない）
 
-GitHub 側に問題が起きたときの退避先を別に確保してある（詳細は管理者の手元の記録）。
+XServer Static（サーバーID `tetotelinks`・利用料0円）を契約したまま残してあり、
+同じサイトが `https://tetotelinks.static.jp/` でも表示できます。GitHub 側に問題が起きたときの逃げ道です。
