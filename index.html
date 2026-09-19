@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="preload" href="images/asuhare-exterior.jpeg" as="image" fetchpriority="high"/>
     <link rel="stylesheet" href="assets/style.css"/>
-    <title>あすはれ薬局｜三島市のドライブスルー対応薬局
-    </title>
-    <meta name="description" content="静岡県三島市のあすはれ薬局。車に乗ったままお薬を受け取れるドライブスルー、キッズスペース、オンライン服薬指導、在宅訪問に対応しています。"/>
+    <title>あすはれ薬局｜三島市谷田のドライブスルー対応 調剤薬局</title>
+    <meta name="description" content="静岡県三島市谷田夏梅木のあすはれ薬局。車に乗ったままお薬を受け取れるドライブスルー、処方箋の事前送信、電子処方箋、オンライン服薬指導、在宅訪問に対応。全国の医療機関の処方箋を受け付けています。無料駐車場6台・月〜土 9:00〜18:30。"/>
+    <link rel="icon" href="favicon.ico" sizes="48x48"/>
+    <link rel="icon" href="images/icon-192.png" type="image/png" sizes="192x192"/>
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
     <meta name="keywords" content="あすはれ薬局,三島市,調剤薬局,ドライブスルー薬局,処方箋,オンライン服薬指導"/>
     <meta name="robots" content="index, follow"/>
     <link rel="canonical" href="https://tetote-links.co.jp/"/>
     <meta property="og:title" content="あすはれ薬局｜あなたの明日を、晴れやかに。"/>
-    <meta property="og:description" content="三島市のドライブスルー対応薬局。月〜土曜 9:00〜18:30営業。"/>
+    <meta property="og:description" content="三島市谷田のドライブスルー対応の調剤薬局。月〜土 9:00〜18:30・無料駐車場6台。"/>
     <meta property="og:url" content="https://tetote-links.co.jp/"/>
     <meta property="og:image" content="https://tetote-links.co.jp/images/asuhare-exterior.jpeg"/>
     <meta property="og:image:width" content="800"/>
@@ -30,13 +32,13 @@
   <body><a class="skip-link" href="#main">本文へ移動</a>
     <header class="site-header">
       <div class="header-inner"><a class="brand" href="#top" aria-label="あすはれ薬局 ホーム"><span class="brand-mark" aria-hidden="true">晴</span><span class="brand-copy"><strong>あすはれ薬局</strong><small>ASUHARE PHARMACY</small></span></a>
-        <nav class="desktop-nav" aria-label="メインナビゲーション"><a href="#features">特長</a><a href="#services">サービス</a><a href="#information">店舗情報</a><a href="#access">アクセス</a>
+        <nav class="desktop-nav" aria-label="メインナビゲーション"><a href="#news">お知らせ</a><a href="#features">特長</a><a href="#services">サービス</a><a href="#information">店舗情報</a><a href="#access">アクセス</a>
         </nav>
         <a class="header-phone" href="tel:0559579080"><small>お電話でのお問い合わせ</small><strong>055-957-9080</strong></a>
         <details class="mobile-menu">
           <summary aria-label="メニュー"><span></span><span></span><span></span>
           </summary>
-          <nav aria-label="モバイルナビゲーション"><a href="#features">特長</a><a href="#services">サービス</a><a href="#information">店舗情報</a><a href="#access">アクセス</a><a href="tel:0559579080">電話する</a>
+          <nav aria-label="モバイルナビゲーション"><a href="#news">お知らせ</a><a href="#features">特長</a><a href="#services">サービス</a><a href="#information">店舗情報</a><a href="#access">アクセス</a><a href="tel:0559579080">電話する</a>
           </nav>
         </details>
       </div>
@@ -72,6 +74,30 @@
       <div><span>ADDRESS</span><strong>三島市谷田夏梅木596-1</strong>
       </div>
       <a href="tel:0559579080"><span>TEL</span><strong>055-957-9080</strong></a>
+    </section>
+    <!--
+      お知らせ欄。中身は Google スプレッドシート（テトテリンクス管理）から読み込む。
+      data-src に「ウェブに公開」した CSV の URL を入れる。空のとき・読めないときは下の <li> をそのまま表示する。
+    -->
+    <section class="section news-section" id="news" aria-labelledby="news-title">
+      <div class="section-heading compact-heading">
+        <p class="eyebrow">NEWS
+        </p>
+        <h2 id="news-title">お知らせ
+        </h2>
+      </div>
+      <ol class="news-list" id="news-list" data-src="">
+        <li class="news-item"><time datetime="2026-09-17">2026.09.17</time><span class="news-tag">お知らせ</span>
+          <div class="news-text">
+            <h3>ホームページを公開しました</h3>
+            <p>営業時間やドライブスルーのご利用方法など、あすはれ薬局のご案内をまとめています。</p>
+          </div>
+        </li>
+      </ol>
+      <details class="news-more" id="news-more" hidden>
+        <summary>過去のお知らせを見る</summary>
+        <ol class="news-list" id="news-older"></ol>
+      </details>
     </section>
     <section class="section features-section" id="features">
       <div class="section-heading">
@@ -334,7 +360,7 @@
   </main>
   <footer class="site-footer">
     <div class="footer-main"><a class="brand brand-footer" href="#top"><span class="brand-mark" aria-hidden="true">晴</span><span class="brand-copy"><strong>あすはれ薬局</strong><small>ASUHARE PHARMACY</small></span></a>
-      <div class="footer-links"><a href="#features">特長</a><a href="#services">サービス</a><a href="#information">店舗情報</a><a href="#access">アクセス</a><a href="https://dpc-net.ne.jp/" target="_blank" rel="noreferrer">DPC 公式サイト ↗</a>
+      <div class="footer-links"><a href="#news">お知らせ</a><a href="#features">特長</a><a href="#services">サービス</a><a href="#information">店舗情報</a><a href="#access">アクセス</a><a href="https://dpc-net.ne.jp/" target="_blank" rel="noreferrer">DPC 公式サイト ↗</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -346,13 +372,111 @@
   </footer>
   <nav class="mobile-fixed" aria-label="クイックアクション"><a href="tel:0559579080">電話する</a><a href="https://clinics-app.com/pharmacy/88a5de13-a0f6-4448-9841-a842852be4b9" target="_blank" rel="noreferrer">処方箋を送る</a>
   </nav>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Pharmacy","name":"あすはれ薬局","image":"https://tetote-links.co.jp/images/asuhare-exterior.jpeg","url":"https://tetote-links.co.jp/","telephone":"+81-55-957-9080","faxNumber":"+81-55-957-9082","email":"asuhare.ph@tetote-links.com","address":{"@type":"PostalAddress","postalCode":"411-0801","addressRegion":"静岡県","addressLocality":"三島市","streetAddress":"谷田夏梅木596-1","addressCountry":"JP"},"geo":{"@type":"GeoCoordinates","latitude":35.1083936,"longitude":138.9353442},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"18:30"}],"sameAs":["https://dpc-net.ne.jp/storeinfo/shizuoka/shizuoka-asuhare/","https://clinics-app.com/pharmacy/88a5de13-a0f6-4448-9841-a842852be4b9"]}
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Pharmacy","@id":"https://tetote-links.co.jp/#pharmacy","name":"あすはれ薬局","alternateName":"ASUHARE PHARMACY","description":"静岡県三島市谷田のドライブスルー対応の調剤薬局。処方箋の事前送信、電子処方箋、オンライン服薬指導、在宅訪問に対応。","url":"https://tetote-links.co.jp/","image":"https://tetote-links.co.jp/images/asuhare-exterior.jpeg","logo":"https://tetote-links.co.jp/images/icon-192.png","telephone":"+81-55-957-9080","faxNumber":"+81-55-957-9082","email":"asuhare.ph@tetote-links.com","address":{"@type":"PostalAddress","postalCode":"411-0801","addressRegion":"静岡県","addressLocality":"三島市","streetAddress":"谷田夏梅木596-1","addressCountry":"JP"},"geo":{"@type":"GeoCoordinates","latitude":35.1083936,"longitude":138.9353442},"hasMap":"https://maps.app.goo.gl/BbsED3E1cP4ga5xw5","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"18:30"}],"paymentAccepted":"現金, クレジットカード, 電子マネー, QRコード決済","currenciesAccepted":"JPY","amenityFeature":[{"@type":"LocationFeatureSpecification","name":"ドライブスルー","value":true},{"@type":"LocationFeatureSpecification","name":"キッズスペース","value":true},{"@type":"LocationFeatureSpecification","name":"おむつ交換台","value":true},{"@type":"LocationFeatureSpecification","name":"無料駐車場（6台）","value":true}],"parentOrganization":{"@id":"https://tetote-links.co.jp/#organization"},"sameAs":["https://dpc-net.ne.jp/storeinfo/shizuoka/shizuoka-asuhare/","https://clinics-app.com/pharmacy/88a5de13-a0f6-4448-9841-a842852be4b9"]},{"@type":"Organization","@id":"https://tetote-links.co.jp/#organization","name":"株式会社テトテリンクス","alternateName":"Tetote Links Inc.","url":"https://tetote-links.co.jp/"},{"@type":"WebSite","@id":"https://tetote-links.co.jp/#website","url":"https://tetote-links.co.jp/","name":"あすはれ薬局","inLanguage":"ja","publisher":{"@id":"https://tetote-links.co.jp/#organization"}}]}
   </script>
   <script>
     // スマホメニュー：項目を選んだら閉じる（開いたままだと移動先の本文を覆うため）
     document.querySelectorAll('.mobile-menu nav a').forEach(function (a) {
       a.addEventListener('click', function () { a.closest('details').open = false; });
     });
+
+    // お知らせ：Google スプレッドシート（CSV で公開）を読んで並べ直す。
+    // 列は見出しの名前で探すので、並び順を入れ替えても動く（日付・種類・見出し・本文・リンク・掲載）。
+    // 読めなかったときは何もしない＝HTML に書いてある既定のお知らせが残る。
+    (function () {
+      var list = document.getElementById('news-list');
+      var src = list && list.getAttribute('data-src');
+      if (!src) return;
+      var SHOW = 5, MAX = 30;
+
+      function parseCSV(text) {
+        var rows = [], row = [], cell = '', q = false;
+        text = text.replace(/^﻿/, '');
+        for (var i = 0; i < text.length; i++) {
+          var c = text[i];
+          if (q) {
+            if (c === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else { q = false; } }
+            else cell += c;
+          } else if (c === '"' && cell === '') q = true;
+          else if (c === ',') { row.push(cell); cell = ''; }
+          else if (c === '\n' || c === '\r') {
+            if (c === '\r' && text[i + 1] === '\n') i++;
+            row.push(cell); rows.push(row); row = []; cell = '';
+          } else cell += c;
+        }
+        if (cell !== '' || row.length) { row.push(cell); rows.push(row); }
+        return rows;
+      }
+      function col(head, re) {
+        for (var i = 0; i < head.length; i++) if (re.test(head[i])) return i;
+        return -1;
+      }
+      function parseDate(s) {
+        var m = /(\d{4})\D+(\d{1,2})\D+(\d{1,2})/.exec(s || '');
+        if (!m) return null;
+        var d = new Date(+m[1], +m[2] - 1, +m[3]);
+        return isNaN(d) ? null : d;
+      }
+      function pad(n) { return (n < 10 ? '0' : '') + n; }
+      function el(tag, cls, text) {
+        var e = document.createElement(tag);
+        if (cls) e.className = cls;
+        if (text != null) e.textContent = text;
+        return e;
+      }
+      function item(n) {
+        var li = el('li', 'news-item');
+        var t = el('time', null, n.date.getFullYear() + '.' + pad(n.date.getMonth() + 1) + '.' + pad(n.date.getDate()));
+        t.setAttribute('datetime', n.date.getFullYear() + '-' + pad(n.date.getMonth() + 1) + '-' + pad(n.date.getDate()));
+        li.appendChild(t);
+        var tag = el('span', 'news-tag', n.kind);
+        if (!n.kind) tag.className += ' is-empty';
+        tag.setAttribute('data-kind', n.kind);
+        li.appendChild(tag);
+        var box = el('div', 'news-text');
+        box.appendChild(el('h3', null, n.title));
+        if (n.body) box.appendChild(el('p', null, n.body));
+        if (/^(https?:\/\/|tel:)/i.test(n.link)) {
+          var a = el('a', 'news-link', /^tel:/i.test(n.link) ? '電話する' : '詳しく見る');
+          a.href = n.link;
+          if (!/^tel:/i.test(n.link)) { a.target = '_blank'; a.rel = 'noopener'; }
+          box.appendChild(a);
+        }
+        li.appendChild(box);
+        return li;
+      }
+
+      fetch(src, { cache: 'no-store' })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then(function (text) {
+          var rows = parseCSV(text);
+          if (rows.length < 1) return;
+          var h = rows[0].map(function (x) { return x.trim(); });
+          var iDate = col(h, /日付/), iTitle = col(h, /見出し|タイトル/);
+          if (iDate < 0 || iTitle < 0) return; // 表の形が違う＝既定のまま
+          var iKind = col(h, /種類|区分/), iBody = col(h, /本文|内容/), iLink = col(h, /リンク|URL/i), iShow = col(h, /掲載|表示/);
+          var news = [];
+          rows.slice(1).forEach(function (r, k) {
+            var g = function (i) { return i < 0 ? '' : (r[i] || '').trim(); };
+            var date = parseDate(g(iDate)), title = g(iTitle);
+            if (!date || !title) return;
+            if (/しない|非表示|×|✕|^no$|^false$|^0$/i.test(g(iShow))) return;
+            news.push({ date: date, title: title, kind: g(iKind), body: g(iBody), link: g(iLink), order: k });
+          });
+          news.sort(function (a, b) { return (b.date - a.date) || (b.order - a.order); });
+          news = news.slice(0, MAX);
+
+          list.textContent = '';
+          if (!news.length) { list.appendChild(el('li', 'news-empty', '現在、お知らせはありません。')); return; }
+          news.slice(0, SHOW).forEach(function (n) { list.appendChild(item(n)); });
+          if (news.length > SHOW) {
+            var older = document.getElementById('news-older');
+            news.slice(SHOW).forEach(function (n) { older.appendChild(item(n)); });
+            document.getElementById('news-more').hidden = false;
+          }
+        })
+        .catch(function () {});
+    })();
   </script>
 </body>
 </html>

@@ -12,6 +12,9 @@
 | `index.html` | ホームページ本体（1ページ完結）。文章・営業時間・電話番号はここ |
 | `assets/style.css` | 見た目（色・余白・文字の大きさ） |
 | `images/asuhare-exterior.jpeg` | 外観写真 |
+| `favicon.ico` / `images/icon-192.png` / `images/apple-touch-icon.png` | ブラウザのタブ・検索結果・スマホのホーム画面に出るアイコン（ロゴの「晴」） |
+| （お知らせ欄） | 中身は **Google スプレッドシート（テトテリンクス管理）** から読み込む。`index.html` の `#news-list` の `data-src` に「ウェブに公開」した CSV の URL を入れる。空・読めないときは HTML に書いた既定の1件を出す。列は見出し名（日付・種類・見出し・本文・リンク・掲載）で探す |
+| `404.html` | 存在しないURLを開いたときのページ（検索には載せない設定） |
 | `CNAME` | GitHub Pages のカスタムドメイン指定。**消さない・書き換えない** |
 | `.nojekyll` | GitHub Pages に Jekyll を通させないための空ファイル。**消さない**（消すと `_` で始まるファイルが黙って配信されなくなる） |
 | `robots.txt` / `sitemap.xml` | 検索エンジン向け。URLを変えたらここも直す |
