@@ -7,7 +7,7 @@
 - 本番URL: **https://tetote-links.co.jp/**
 - GitHubリポジトリ: `asuhare-website`（Public — GitHub Pages 無料枠の要件）
 - ホスティング: GitHub Pages（main ブランチのルートをそのまま配信）
-- 運営: 株式会社テトテリンクス（**実際の更新作業は田中が行う**）
+- 運営: 株式会社テトテリンクス
 - 旧URL: `asuhare-pharmacy.toru-hitoyado.chatgpt.site`（ChatGPTのサイト公開機能）
   → 新URLが数日問題なく開くのを確認してから停止する。**先に止めない**
 
@@ -17,9 +17,9 @@
 
 1. このフォルダ（`C:\dev\asuhare-website`）で Claude Code を開き、日本語で頼む
 2. `index.html` をブラウザにドラッグして見た目を確認
-3. **`公開.bat` をダブルクリック**（コミット＋push。1〜2分で本番反映）
+3. **`公開.bat` をダブルクリック**（変更ファイルを表示 → `y` で確定 → コミット＋push。1〜2分で本番反映）
 
-コマンドで済ませる場合は `git add -A && git commit -m "..." && git push`。
+コマンドで済ませる場合も `publish.ps1` を通す（`-Yes` で確認を省略できる）。
 
 ---
 
@@ -35,6 +35,10 @@
 | A | `@` | `185.199.109.153` | 未登録 |
 | A | `@` | `185.199.110.153` | 未登録 |
 | A | `@` | `185.199.111.153` | 未登録 |
+| AAAA | `@` | `2606:50c0:8000::153` | 未登録 |
+| AAAA | `@` | `2606:50c0:8001::153` | 未登録 |
+| AAAA | `@` | `2606:50c0:8002::153` | 未登録 |
+| AAAA | `@` | `2606:50c0:8003::153` | 未登録 |
 | CNAME | `www` | `ph2144tt0609-cmyk.github.io` | **未登録** |
 
 DNSの管理画面＝エックスサーバー（**株式会社テトテリンクス名義のアカウント**）の「DNSレコード設定」。
@@ -44,12 +48,14 @@ DNSの管理画面＝エックスサーバー（**株式会社テトテリンク
 
 しずくと揃えて **`www.tetote-links.co.jp` を正**にする予定（www なしは自動転送される）。手順は次の3つ。
 
-1. Xserver で上表の未登録4件（A×3・CNAME×1）を追加する
+1. Xserver で上表の未登録8件（A×3・AAAA×4・CNAME×1）を追加する
    **⚠️ CNAME の値に末尾の `.` を付けると弾かれる**（`内容の末尾に「.」があります`）
 2. `CNAME` ファイルの中身を `www.tetote-links.co.jp` に書き換えて push
 3. GitHub Pages 側が新しいドメインで証明書を発行し直すのを待つ（数分〜1時間）
 
-**あわせて `robots.txt` と `sitemap.xml` の中のURLも `www` 付きに直す**（いまは www なしで書いてある）。
+**あわせて、次の絶対URLもすべて `www` 付きに直す**（いまは www なしで書いてある）。
+`index.html` の canonical・og:url・og:image・twitter:image・JSON-LD の url/image、`robots.txt`、`sitemap.xml`、`README.md`。
+`publish.ps1` は `CNAME` と canonical が食い違っていると公開を止める。
 
 **雑誌に刷るURLは `tetote-links.co.jp`（www なし）のままで問題ありません。**
 切り替え後も www なしは www ありへ自動転送されます。
@@ -69,5 +75,4 @@ DNSの管理画面＝エックスサーバー（**株式会社テトテリンク
 
 ## 退避先（使っていない）
 
-XServer Static（サーバーID `tetotelinks`・利用料0円）を契約したまま残してあり、
-同じサイトが `https://tetotelinks.static.jp/` でも表示できます。GitHub 側に問題が起きたときの逃げ道です。
+GitHub 側に問題が起きたときの退避先を別に確保してある（詳細は管理者の手元の記録）。
